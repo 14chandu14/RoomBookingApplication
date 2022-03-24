@@ -1,0 +1,13 @@
+<div>
+    <form #userForm="ngForm">
+
+        Email ID: <input type="text" placeholder="Email ID" #emailField="ngModel" name="emailid" [(ngModel)]="user.emailid" required>
+        <span *ngIf="emailField.invalid && emailField.touched">Please enter EMAIL ID.</span><br><br>
+
+        Password: <input type="password" placeholder="password" #passwordField="ngModel" [(ngModel)]="user.password" name="password" required>
+        <span *ngIf="passwordField.invalid && passwordField.touched">Please enter password.</span><br><br>
+
+        <input type="button" value="Login" (click)="login()" [disabled]="userForm.invalid"><br><br>
+        {{loginOutputMessage}}
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<table border="1">
+    <tr>
+        <th>Room No.</th>
+        <th>Charges</th>
+        <th>Book</th>
+    </tr>
+    <tr *ngFor="let b of allRoomsForBooking">
+        <td>{{b.roomNo}}</td>
+        <td>{{b.charges}}</td>
+        <td><input type="button" value="Book"></td>
+    </tr>
+</table>
